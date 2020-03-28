@@ -14,8 +14,7 @@ async function createNewTodo() {
   const todo = {  name: "Uftrag 1001" , 
                   description: "Masken bringen",
                   detChef: "Wm Matter",
-                  abfahrt: "Langental",
-                  ankunft: "Mudon",}
+                  direction: [1200, Moudon, Zurich]}
   await API.graphql(graphqlOperation(createTodo, { input: todo }))
 }
 
