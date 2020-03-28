@@ -8,8 +8,11 @@ export const onCreateTodo = /* GraphQL */ `
       name
       description
       detChef
-      abfahrt
-      ankunft
+      direction {
+        time
+        fromPlace
+        toPlace
+      }
       kilometer
       liter
     }
@@ -22,8 +25,11 @@ export const onUpdateTodo = /* GraphQL */ `
       name
       description
       detChef
-      abfahrt
-      ankunft
+      direction {
+        time
+        fromPlace
+        toPlace
+      }
       kilometer
       liter
     }
@@ -36,8 +42,11 @@ export const onDeleteTodo = /* GraphQL */ `
       name
       description
       detChef
-      abfahrt
-      ankunft
+      direction {
+        time
+        fromPlace
+        toPlace
+      }
       kilometer
       liter
     }

@@ -8,8 +8,11 @@ export const getTodo = /* GraphQL */ `
       name
       description
       detChef
-      abfahrt
-      ankunft
+      direction {
+        time
+        fromPlace
+        toPlace
+      }
       kilometer
       liter
     }
@@ -27,8 +30,11 @@ export const listTodos = /* GraphQL */ `
         name
         description
         detChef
-        abfahrt
-        ankunft
+        direction {
+          time
+          fromPlace
+          toPlace
+        }
         kilometer
         liter
       }
