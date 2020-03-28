@@ -4,13 +4,13 @@ type Todo @model {
   name: String!
   description: String
   detChef: String
-  direction: [directionReport]
+  direction: [directionreport]
   kilometer: Int
   liter: Int
 }
 
 type directionReport {
   time:      Int!
-  fromPlace: String
-  toPlace:   String
+  fromplace: String
+  toplace:   String
 }
