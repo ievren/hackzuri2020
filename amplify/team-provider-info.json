@@ -1,0 +1,15 @@
+{
+    "rewopenv": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-hackzuri2020-rewopenv-160244-authRole",
+            "UnauthRoleArn": "arn:aws:iam::215863221162:role/amplify-hackzuri2020-rewopenv-160244-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::215863221162:role/amplify-hackzuri2020-rewopenv-160244-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-hackzuri2020-rewopenv-160244-deployment",
+            "UnauthRoleName": "amplify-hackzuri2020-rewopenv-160244-unauthRole",
+            "StackName": "amplify-hackzuri2020-rewopenv-160244",
+            "StackId": "arn:aws:cloudformation:eu-west-1:215863221162:stack/amplify-hackzuri2020-rewopenv-160244/2e718c30-7105-11ea-b087-0670bd49f898",
+            "AmplifyAppId": "d3fso1ultasj04"
+        }
+    }
+}

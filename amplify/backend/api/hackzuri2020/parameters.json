@@ -1,0 +1,5 @@
+{
+    "AppSyncApiName": "hackzuri2020",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false"
+}
