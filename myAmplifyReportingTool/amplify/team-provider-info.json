@@ -11,5 +11,12 @@
             "StackId": "arn:aws:cloudformation:eu-west-1:215863221162:stack/amplify-myamplifyreportingto-rewopenv-161917/7f0efd60-7107-11ea-b5e4-02bfe56b0f60",
             "AmplifyAppId": "d2djhtdwweh3fp"
         }
+    },
+    "rtool": {
+        "categories": {
+            "auth": {
+                "myamplifyreportingto3348b30f": {}
+            }
+        }
     }
 }
