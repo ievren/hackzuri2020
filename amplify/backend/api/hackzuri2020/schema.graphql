@@ -3,13 +3,15 @@ type Todo @model {
   name: String!
   description: String
   detChef: String
-  direction: [directionReport]
+  reports: [directionReport] @connection(name: "TodoDirectionreports")
   kilometer: Int
   liter: Int
 }
 
-type directionReport {
+type directionReport @model{
+  id: ID!
   time:      Int!
   fromPlace: String
   toPlace:   String
+  todo: Todo @connection(name: "TodoDirectionreports")
 }

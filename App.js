@@ -11,10 +11,13 @@ API.configure(config)             // Configure Amplify
 PubSub.configure(config)
 
 async function createNewTodo() {
+  const report1 = { time: 1200,
+                    fromPlace: "Moudon",
+                    toPlace: "Zurich"};
   const todo = {  name: "Uftrag 1001" , 
                   description: "Masken bringen",
                   detChef: "Wm Matter",
-                  direction: [1200, Moudon, Zurich]}
+                  reports: [report1]};
   await API.graphql(graphqlOperation(createTodo, { input: todo }))
 }
 
@@ -53,7 +56,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Button onPress={createNewTodo} title='Create Todo' />
-  { state.todos.map((todo, i) => <Text key={todo.id}>{todo.name}: ({todo.abfahrt}->{todo.ankunft}) - DetChef: {todo.detChef} [{todo.description}]</Text>) }
+  { state.todos.map((todo, i) => <Text key={todo.id}>{todo.name}: - DetChef: {todo.detChef} [{todo.description}]  {todo.reports.map((report, i) => <Text key={report.id}>({report.time}: {report.fromPlace} -> {report.toPlace})</Text>)} </Text>) }
     </View>
   );
 }

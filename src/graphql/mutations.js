@@ -11,10 +11,14 @@ export const createTodo = /* GraphQL */ `
       name
       description
       detChef
-      direction {
-        time
-        fromPlace
-        toPlace
+      reports {
+        items {
+          id
+          time
+          fromPlace
+          toPlace
+        }
+        nextToken
       }
       kilometer
       liter
@@ -31,10 +35,14 @@ export const updateTodo = /* GraphQL */ `
       name
       description
       detChef
-      direction {
-        time
-        fromPlace
-        toPlace
+      reports {
+        items {
+          id
+          time
+          fromPlace
+          toPlace
+        }
+        nextToken
       }
       kilometer
       liter
@@ -51,13 +59,89 @@ export const deleteTodo = /* GraphQL */ `
       name
       description
       detChef
-      direction {
-        time
-        fromPlace
-        toPlace
+      reports {
+        items {
+          id
+          time
+          fromPlace
+          toPlace
+        }
+        nextToken
       }
       kilometer
       liter
+    }
+  }
+`;
+export const createDirectionReport = /* GraphQL */ `
+  mutation CreateDirectionReport(
+    $input: CreateDirectionReportInput!
+    $condition: ModeldirectionReportConditionInput
+  ) {
+    createDirectionReport(input: $input, condition: $condition) {
+      id
+      time
+      fromPlace
+      toPlace
+      todo {
+        id
+        name
+        description
+        detChef
+        reports {
+          nextToken
+        }
+        kilometer
+        liter
+      }
+    }
+  }
+`;
+export const updateDirectionReport = /* GraphQL */ `
+  mutation UpdateDirectionReport(
+    $input: UpdateDirectionReportInput!
+    $condition: ModeldirectionReportConditionInput
+  ) {
+    updateDirectionReport(input: $input, condition: $condition) {
+      id
+      time
+      fromPlace
+      toPlace
+      todo {
+        id
+        name
+        description
+        detChef
+        reports {
+          nextToken
+        }
+        kilometer
+        liter
+      }
+    }
+  }
+`;
+export const deleteDirectionReport = /* GraphQL */ `
+  mutation DeleteDirectionReport(
+    $input: DeleteDirectionReportInput!
+    $condition: ModeldirectionReportConditionInput
+  ) {
+    deleteDirectionReport(input: $input, condition: $condition) {
+      id
+      time
+      fromPlace
+      toPlace
+      todo {
+        id
+        name
+        description
+        detChef
+        reports {
+          nextToken
+        }
+        kilometer
+        liter
+      }
     }
   }
 `;

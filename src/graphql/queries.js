@@ -8,10 +8,14 @@ export const getTodo = /* GraphQL */ `
       name
       description
       detChef
-      direction {
-        time
-        fromPlace
-        toPlace
+      reports {
+        items {
+          id
+          time
+          fromPlace
+          toPlace
+        }
+        nextToken
       }
       kilometer
       liter
@@ -30,13 +34,61 @@ export const listTodos = /* GraphQL */ `
         name
         description
         detChef
-        direction {
-          time
-          fromPlace
-          toPlace
+        reports {
+          nextToken
         }
         kilometer
         liter
+      }
+      nextToken
+    }
+  }
+`;
+export const getDirectionReport = /* GraphQL */ `
+  query GetDirectionReport($id: ID!) {
+    getDirectionReport(id: $id) {
+      id
+      time
+      fromPlace
+      toPlace
+      todo {
+        id
+        name
+        description
+        detChef
+        reports {
+          nextToken
+        }
+        kilometer
+        liter
+      }
+    }
+  }
+`;
+export const listDirectionReports = /* GraphQL */ `
+  query ListDirectionReports(
+    $filter: ModeldirectionReportFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listDirectionReports(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        time
+        fromPlace
+        toPlace
+        todo {
+          id
+          name
+          description
+          detChef
+          kilometer
+          liter
+        }
       }
       nextToken
     }
