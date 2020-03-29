@@ -8,10 +8,14 @@ export const onCreateTodo = /* GraphQL */ `
       name
       description
       detChef
-      direction {
-        time
-        fromPlace
-        toPlace
+      reports {
+        items {
+          id
+          time
+          fromPlace
+          toPlace
+        }
+        nextToken
       }
       kilometer
       liter
@@ -25,10 +29,14 @@ export const onUpdateTodo = /* GraphQL */ `
       name
       description
       detChef
-      direction {
-        time
-        fromPlace
-        toPlace
+      reports {
+        items {
+          id
+          time
+          fromPlace
+          toPlace
+        }
+        nextToken
       }
       kilometer
       liter
@@ -42,13 +50,80 @@ export const onDeleteTodo = /* GraphQL */ `
       name
       description
       detChef
-      direction {
-        time
-        fromPlace
-        toPlace
+      reports {
+        items {
+          id
+          time
+          fromPlace
+          toPlace
+        }
+        nextToken
       }
       kilometer
       liter
+    }
+  }
+`;
+export const onCreateDirectionReport = /* GraphQL */ `
+  subscription OnCreateDirectionReport {
+    onCreateDirectionReport {
+      id
+      time
+      fromPlace
+      toPlace
+      todo {
+        id
+        name
+        description
+        detChef
+        reports {
+          nextToken
+        }
+        kilometer
+        liter
+      }
+    }
+  }
+`;
+export const onUpdateDirectionReport = /* GraphQL */ `
+  subscription OnUpdateDirectionReport {
+    onUpdateDirectionReport {
+      id
+      time
+      fromPlace
+      toPlace
+      todo {
+        id
+        name
+        description
+        detChef
+        reports {
+          nextToken
+        }
+        kilometer
+        liter
+      }
+    }
+  }
+`;
+export const onDeleteDirectionReport = /* GraphQL */ `
+  subscription OnDeleteDirectionReport {
+    onDeleteDirectionReport {
+      id
+      time
+      fromPlace
+      toPlace
+      todo {
+        id
+        name
+        description
+        detChef
+        reports {
+          nextToken
+        }
+        kilometer
+        liter
+      }
     }
   }
 `;
