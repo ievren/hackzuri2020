@@ -1,40 +1,15 @@
 {
-    "rewopenv": {
+    "hackzurich": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-myamplifyreportingto-rewopenv-161917-authRole",
-            "UnauthRoleArn": "arn:aws:iam::215863221162:role/amplify-myamplifyreportingto-rewopenv-161917-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::215863221162:role/amplify-myamplifyreportingto-rewopenv-161917-authRole",
-            "Region": "eu-west-1",
-            "DeploymentBucketName": "amplify-myamplifyreportingto-rewopenv-161917-deployment",
-            "UnauthRoleName": "amplify-myamplifyreportingto-rewopenv-161917-unauthRole",
-            "StackName": "amplify-myamplifyreportingto-rewopenv-161917",
-            "StackId": "arn:aws:cloudformation:eu-west-1:215863221162:stack/amplify-myamplifyreportingto-rewopenv-161917/7f0efd60-7107-11ea-b5e4-02bfe56b0f60",
-            "AmplifyAppId": "d2djhtdwweh3fp"
-        }
-    },
-    "rtool": {
-        "categories": {
-            "auth": {
-                "myamplifyreportingto3348b30f": {}
-            }
-        }
-    },
-    "rewop": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-myamplifyreportingto-rewop-223317-authRole",
-            "UnauthRoleArn": "arn:aws:iam::407824493747:role/amplify-myamplifyreportingto-rewop-223317-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::407824493747:role/amplify-myamplifyreportingto-rewop-223317-authRole",
-            "Region": "eu-west-1",
-            "DeploymentBucketName": "amplify-myamplifyreportingto-rewop-223317-deployment",
-            "UnauthRoleName": "amplify-myamplifyreportingto-rewop-223317-unauthRole",
-            "StackName": "amplify-myamplifyreportingto-rewop-223317",
-            "StackId": "arn:aws:cloudformation:eu-west-1:407824493747:stack/amplify-myamplifyreportingto-rewop-223317/be4c44e0-713b-11ea-a410-021deeb5f1c0",
-            "AmplifyAppId": "d5qyvv02dvwu6"
-        },
-        "categories": {
-            "auth": {
-                "myamplifyreportingto3348b30f": {}
-            }
+            "AuthRoleName": "amplify-hackzuri2020-hackzurich-121504-authRole",
+            "UnauthRoleArn": "arn:aws:iam::407824493747:role/amplify-hackzuri2020-hackzurich-121504-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::407824493747:role/amplify-hackzuri2020-hackzurich-121504-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-hackzuri2020-hackzurich-121504-deployment",
+            "UnauthRoleName": "amplify-hackzuri2020-hackzurich-121504-unauthRole",
+            "StackName": "amplify-hackzuri2020-hackzurich-121504",
+            "StackId": "arn:aws:cloudformation:us-east-1:407824493747:stack/amplify-hackzuri2020-hackzurich-121504/35880d40-71a6-11ea-8dd2-1201663355d3",
+            "AmplifyAppId": "d1glbts5ianolv"
         }
     }
 }

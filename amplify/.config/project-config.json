@@ -1,14 +1,14 @@
 {
-    "projectName": "myAmplifyReportingTo",
+    "projectName": "hackzuri2020",
     "version": "3.0",
     "frontend": "javascript",
     "javascript": {
         "framework": "react-native",
         "config": {
             "SourceDir": "/",
-            "DistributionDir": "/",
-            "BuildCommand": "npm run-script build",
-            "StartCommand": "npm run-script start"
+            "DistributionDir": "/dist",
+            "BuildCommand": "npm.cmd run-script build",
+            "StartCommand": "npm.cmd run-script start"
         }
     },
     "providers": [

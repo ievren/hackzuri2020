@@ -1,6 +1,6 @@
 {
 	"api": {
-		"myamplifyreportingto": {
+		"hackzuri2020": {
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {
@@ -9,32 +9,12 @@
 					"defaultAuthentication": {
 						"authenticationType": "API_KEY",
 						"apiKeyConfig": {
-							"description": "desrewop",
+							"description": "apikey",
 							"apiKeyExpirationDays": "365"
 						}
 					}
 				}
 			}
-		}
-	},
-	"auth": {
-		"myamplifyreportingto3348b30f": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [],
-			"customAuth": false
-		}
-	},
-	"analytics": {
-		"myamplifyreportingto": {
-			"service": "Pinpoint",
-			"providerPlugin": "awscloudformation"
-		}
-	},
-	"storage": {
-		"s3f44d85c4": {
-			"service": "S3",
-			"providerPlugin": "awscloudformation"
 		}
 	}
 }
