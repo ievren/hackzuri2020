@@ -1,5 +1,5 @@
 projects:
-  myamplifyreportingto:
+  hackzuri2020:
     schemaPath: src/graphql/schema.json
     includes:
       - src/graphql/**/*.js

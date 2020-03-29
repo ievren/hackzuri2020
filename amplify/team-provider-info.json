@@ -10,6 +10,14 @@
             "StackName": "amplify-hackzuri2020-hackzurich-121504",
             "StackId": "arn:aws:cloudformation:us-east-1:407824493747:stack/amplify-hackzuri2020-hackzurich-121504/35880d40-71a6-11ea-8dd2-1201663355d3",
             "AmplifyAppId": "d1glbts5ianolv"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1glbts5ianolv",
+                    "type": "cicd"
+                }
+            }
         }
     }
 }
