@@ -2,7 +2,7 @@ import React, { useEffect, useReducer } from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native';
 import API, { graphqlOperation } from '@aws-amplify/api'
 import PubSub from '@aws-amplify/pubsub';
-import { createTodo } from './src/graphql/mutations';
+import { createTodo, createDirectionReport } from './src/graphql/mutations';
 import { listTodos } from './src/graphql/queries';
 import { onCreateTodo } from './src/graphql/subscriptions';
 
@@ -15,6 +15,14 @@ async function createNewTodo() {
                   description: "Masken bringen",
                   detChef: "Wm Matter",};
   await API.graphql(graphqlOperation(createTodo, { input: todo }))
+}
+
+async function createNewReport() {
+  const report = {  time: 1200,
+                    fromPlace: "Mudon",
+                    toPlace: "Zurich",
+                    directionReportTodoId: "976659ab-e578-46a4-8127-fb98273a5f0e"};
+  await API.graphql(graphqlOperation(createDirectionReport, { input: report }))
 }
 
 const initialState = {todos:[]};
@@ -48,12 +56,14 @@ export default function App() {
     const todoData = await API.graphql(graphqlOperation(listTodos))
     dispatch({type:'QUERY', todos: todoData.data.listTodos.items});
   }
+  console.log(state);
 
   return (
     <View style={styles.container}>
       
       <Button onPress={createNewTodo} title='Create Todo' />
-  { state.todos.map((todo, i) => <Text key={todo.id}>{todo.name}: - DetChef: {todo.detChef} [{todo.description}]  {todo.reports.map((report, i) => <Text key={report.id}>({report.time}: {report.fromPlace} -> {report.toPlace})</Text>)} </Text>) }
+  { state.todos.map((todo, i) => <Text key={todo.id}>{todo.name}: - DetChef: {todo.detChef} [{todo.description}] <Button onPress={createNewReport} title='Create Report' /></Text>) }
+
     </View>
   );
 }
